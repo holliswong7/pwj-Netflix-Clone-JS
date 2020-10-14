@@ -1,0 +1,10 @@
+- Create HTML Structure
+- Create header
+- Style header
+- Create feature section
+- Create Netflix Originals
+- Create Movies List
+- Create Trending Now
+- Style the elements
+- Technology: HTML, CSS, JS
+- Icons: font awesome
