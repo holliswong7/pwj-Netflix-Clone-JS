@@ -3,17 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PWJ Netfelix Clone JS</title>
-    <style>
-        .netflixOriginals__movies {
-            overflow-x: scroll;
-            white-space: nowrap;
-        }
-        img {
-            width: 100px;
-
-        }
-    </style>
+    <title>PWJ Netflix Clone JS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
 <body>
     <header>
@@ -22,21 +14,23 @@
 
     <main>
         <div class="featured">
-            <h3>Title</h3>
+            <h2>Crash Landing on You</h2>
             <div class="featured__button">
-                <button>PLAY</button>
-                <button>MY LIST</button>
+                <button class="buttons__play"><i class="fas fa-play"></i>Play</button>
+                <button><i class="fas fa-plus"></i>My List</button>
             </div>
             <div class="featured__description">
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
             </div>
         </div>
 
         <div class="netflixOriginals">
-            <div class="netflixOriginals__title">NETFLIX ORIGINALS</div>
+            <div class="netflixOriginals__header">
+                NETFLIX ORIGINALS
+            </div>
             <div class="netflixOriginals__movies">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDjLcuaSnQ7jExLywFiFgRM8_71h3qIjdla359raNqzU4BFY8n">
-                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTa-epJay8nnbNLToDnAi4jr-5jtyHQiqrQ7PEQzPuP45tgEkAU">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Record_of_Youth.jpg/250px-Record_of_Youth.jpg">
                 <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTxf7Ida_bqNddNOAcoE9wXrLC5dJ23TiRBnoPn8oHKohoExlXV">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgRcPawUSYoFBqNmmt8rfDIN_jenk_Hsr6ZuyKVxWpe9yUdNKC">
                 <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQR9nWodwMRAwPnOyUZ_86wNH8r8IzoJbjXs3cfAaD2aiStl7QB">
@@ -44,7 +38,33 @@
             </div>
         </div>
 
-        <div class="movies"></div>
+        <div class="movies">
+            <div class="movies__header">
+                Trending Now
+            </div>
+            <div class="movies__container">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+            </div>            
+        </div>
+
+        <div class="movies">
+            <div class="movies__header">
+                Top Rated
+            </div>
+            <div class="movies__container">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+                <img src="https://www.kworldnow.com/wp-content/uploads/2020/07/Itaewon_Class-drama-poster-2020.jpg">
+            </div>            
+        </div>
     </main>
 
 </body>

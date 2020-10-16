@@ -1,0 +1,77 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.featured {
+    height: 450px;
+    background-image: url('https://occ-0-1722-1723.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQokqjQeeLYsa5rb0BMwt5fFzSgL9rJAA0G1NhfVprpCoST549OA4k5xgNF4bNIJjLc5kDeBGTMfe02IJfqZehPRouUE.jpg?r=cbd');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding: 0 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.featured h2 {
+    font-size: 50px;
+    margin: 0;
+    z-index: 10;
+}
+
+.featured .featured__button {
+    z-index: 10;
+}
+
+.featured .featured__button button{
+    font-size: 16px;
+    color: white;
+    background-color: rgba(51, 51, 51, .4);
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.featured .featured__button .buttons__play{
+    background-color: white;
+    color: black;
+}
+
+.featured .featured__button i {
+    margin-right: 6px;
+}
+
+.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.featured .featured__description {
+    max-width: 450px;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
+    z-index: 10;
+    padding-top: 5px;
+}
+
+.netflixOriginals__movies {
+    overflow-x: scroll;
+    white-space: nowrap;
+    height: 150px;
+    overflow: hidden;
+}
+
+img {
+    width: 100px;
+    
+}
