@@ -8,3 +8,8 @@
 - Style the elements
 - Technology: HTML, CSS, JS
 - Icons: font awesome
+
+- Create a Header
+- Finish up the moives section
+- Understand Promises, APIs, Fetch
+- Pull in movies from API
