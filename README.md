@@ -1,8 +1,10 @@
 # Netflix Clone JavaScript
 
-[DEMO](https://holliswong7.github.io/pwj-Netflix-Clone-JS/)
-
 This is an ongoing project.
-Next task is:
+
+Tasks completed:
 
 - Pull data from TMDB API
+- Add hover effect
+- HTML structure
+- CSS styling
