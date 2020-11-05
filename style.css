@@ -1,135 +1,148 @@
 body {
-    background-color: #111;
-    color: white;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin: 0;
+  background-color: #111;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 header .logo img {
-    width: 120px;
+  width: 120px;
 }
 
 header .profile img {
-    width: 40px;
+  width: 40px;
 }
 
 .featured {
-    height: 450px;
-    background-image: url('https://occ-0-1722-1723.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQokqjQeeLYsa5rb0BMwt5fFzSgL9rJAA0G1NhfVprpCoST549OA4k5xgNF4bNIJjLc5kDeBGTMfe02IJfqZehPRouUE.jpg?r=cbd');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    padding: 0 0 0 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+  height: 450px;
+  background-image: url("https://occ-0-1722-1723.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQokqjQeeLYsa5rb0BMwt5fFzSgL9rJAA0G1NhfVprpCoST549OA4k5xgNF4bNIJjLc5kDeBGTMfe02IJfqZehPRouUE.jpg?r=cbd");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 0 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .featured h2 {
-    font-size: 50px;
-    margin: 0;
-    z-index: 10;
+  font-size: 50px;
+  margin: 0;
+  z-index: 10;
 }
 
 .featured .featured__button {
-    z-index: 10;
+  z-index: 10;
 }
 
-.featured .featured__button button{
-    font-size: 16px;
-    color: white;
-    background-color: rgba(51, 51, 51, .4);
-    border: none;
-    padding: 8px 24px;
-    border-radius: 4px;
-    z-index: 10;
+.featured .featured__button button {
+  font-size: 16px;
+  color: white;
+  background-color: rgba(51, 51, 51, 0.4);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  z-index: 10;
 }
 
-.featured .featured__button .buttons__play{
-    background-color: white;
-    color: black;
+.featured .featured__button .buttons__play {
+  background-color: white;
+  color: black;
 }
 
 .featured .featured__button i {
-    margin-right: 6px;
+  margin-right: 6px;
 }
 
 .featured::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.25);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .featured::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 7.4rem;
-    /* background-color: green; */
-    background-image: linear-gradient(180deg, transparent, rgba(37,37,37,.61), #111);
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 7.4rem;
+  /* background-color: green; */
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
 }
 
 .featured .featured__description {
-    max-width: 450px;
-    font-weight: 400;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
-    z-index: 10;
-    padding-top: 5px;
+  max-width: 450px;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  z-index: 10;
+  padding-top: 5px;
 }
 
-.netflixOriginals__movies {
-    overflow-x: scroll;
-    white-space: nowrap;
-    overflow: hidden;
-    padding-left: 50px;
+/* .netflixOriginals__movies {
+  padding-top: 20px;
+  padding-bottom: 20px;
+} */
+
+.netflixOriginals__movies,
+.movies__container {
+  padding-left: 50px;
+  display: flex;
+  overflow-x: scroll;
+  /* white-space: nowrap;
+  overflow: hidden; */
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .netflixOriginals__movies img {
-    margin-right: 10px;
-    height: 250px;
-    width: auto;
+  margin-right: 10px;
+  height: 250px;
+  width: auto;
 }
 
-/* img {
-    width: 100px;
-    
-} */
-
-.netflixOriginals__header h2 {
-    padding-left: 30px;
-}
-
+.netflixOriginals__header h2,
 .movies__header h2 {
-    padding-left: 30px;
-}
-
-.movies__container {
-    padding-left: 50px;
+  padding-left: 30px;
 }
 
 .movies__container img {
-    padding-right: 10px;
-    height: 120px;
-    width: auto;
+  margin-right: 10px;
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+}
+.netflixOriginals__movies img,
+.movies__container img {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.netflixOriginals__movies img:hover,
+.movies__container img:hover {
+  transform: scale(1.1);
 }

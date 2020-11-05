@@ -1,3 +1,7 @@
+- Horizontal scroll for movies
+- Retreive the other movies from the API
+- Add the hover effect to individual movies
+
 - Create HTML Structure
 - Create header
 - Style header

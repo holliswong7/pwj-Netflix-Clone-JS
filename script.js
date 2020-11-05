@@ -1,14 +1,50 @@
+var api_key = config.api_key;
+
 window.onload = () => {
-    addMovies();
+    getOriginals()
+    getTrendingNow();
+    getTopRated();
 }
 
-function addMovies() {
-    var moviesEl = document.querySelector('.netflixOriginals__movies');
-    // console.log(moviesEl);
-    moviesEl.innerHTML += '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDjLcuaSnQ7jExLywFiFgRM8_71h3qIjdla359raNqzU4BFY8n">';
-    moviesEl.innerHTML += '<img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Record_of_Youth.jpg/250px-Record_of_Youth.jpg">';
-    moviesEl.innerHTML += '<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTxf7Ida_bqNddNOAcoE9wXrLC5dJ23TiRBnoPn8oHKohoExlXV">';
-    moviesEl.innerHTML += '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgRcPawUSYoFBqNmmt8rfDIN_jenk_Hsr6ZuyKVxWpe9yUdNKC">';
-    moviesEl.innerHTML += '<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQR9nWodwMRAwPnOyUZ_86wNH8r8IzoJbjXs3cfAaD2aiStl7QB">';
-    moviesEl.innerHTML += '<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTKRbFs9EUISleKCHEEJ5_3W9zGFsq95dfuMRBK6vcHd1CbgqqE">';
+function fetchMovies(url, element_selector, path_type) {
+    fetch(url)
+    .then((response) => {
+        if (response.ok) {
+            return response.json();
+        }else{
+            throw new Error("something went wrong")
+        }
+    })
+    .then((data) => {
+        showMovies(data, element_selector, path_type)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+}
+
+function showMovies(movies, element_selector, path_type) {
+    var moviesEl = document.querySelector(element_selector);
+    
+    for(var movie of movies.results){
+        var image = `
+            <img src="https://image.tmdb.org/t/p/original${movie[path_type]}" />
+        `
+        moviesEl.innerHTML += image;
+    }
+}
+
+function getOriginals() {
+    var url = "https://api.themoviedb.org/3/discover/tv?api_key=" + api_key
+    fetchMovies(url, '.netflixOriginals__movies', 'poster_path')
+}
+
+function getTrendingNow() {
+    var url = "https://api.themoviedb.org/3/trending/tv/week?api_key=" + api_key
+    fetchMovies(url, '#trending', 'backdrop_path')
+}
+
+function getTopRated() {
+    var url = "https://api.themoviedb.org/3/movie/top_rated?api_key=" + api_key + "&language=en-US&page=1"
+    fetchMovies(url, '#topRated', 'backdrop_path')
 }
